@@ -7,7 +7,7 @@
 // </main>
 // }
 
-import HeroSection from './components/HeroSection'
+import HeroSection from './components/HeroComponent/HeroSection'
 
 export default function Home() {
   return (
