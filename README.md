@@ -1,2 +1,2 @@
-# baltar-inc
-This is a codebase for baltar-inc
+# Baltar Inc. Monorepo
+This is the root of the project.
