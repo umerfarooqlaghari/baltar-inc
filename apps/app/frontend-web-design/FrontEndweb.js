@@ -1,5 +1,5 @@
 'use client';
-import styles from './FrontEndWeb.css';
+import './FrontEndWeb.css';
 
 export default function FrontEndWebDesign() {
   return (
@@ -18,35 +18,22 @@ export default function FrontEndWebDesign() {
         </div>
       </section>
 
-      {/* <section className="feature-section">
-        <video autoPlay muted loop playsInline className="feature-video">
+      {/* 2. AI Website Audit Tool Section */}
+      <section className="feature-audit-section">
+        <video autoPlay muted loop playsInline className="audit-video">
           <source src="/AIAudit.mp4" type="video/mp4" />
         </video>
-        <div className="feature-card">
-          <h2>AI Website Audit Tool</h2>
-          <p>
-            Run instant diagnostics on your site’s SEO, performance, and security.
-            Our AI audit tool gives actionable insights tailored for growth.
-          </p>
+        <div className="audit-content">
+          <div className="audit-card">
+            <h2>AI Website Audit Tool</h2>
+            <p>
+              Run instant diagnostics on your site’s SEO, performance, and security. Our AI audit tool gives actionable insights tailored for growth.
+            </p>
+          </div>
         </div>
-      </section> */}
+      </section>
 
-    {/* 2. AI Website Audit Tool Section with full video background */}
-<section className="feature-audit-section">
-  <video autoPlay muted loop playsInline className="audit-video">
-    <source src="/AIAudit.mp4" type="video/mp4" />
-  </video>
-  <div className="audit-content">
-    <div className="audit-card">
-      <h2>AI Website Audit Tool</h2>
-      <p>
-        Run instant diagnostics on your site’s SEO, performance, and security. Our AI audit tool gives actionable insights tailored for growth.
-      </p>
-    </div>
-  </div>
-</section>
-
-      {/* 3. Grid Services: Booking, SEO, Subscription, Dashboard */}
+      {/* 3. Services Grid */}
       <section className="grid-section">
         <h2>Smart Web Services</h2>
         <div className="card-grid">
@@ -72,12 +59,14 @@ export default function FrontEndWebDesign() {
               video: '/subscribe.mp4',
             },
           ].map((item, idx) => (
-            <div className="service-card" key={idx}>
-              <video autoPlay muted loop playsInline className="card-video">
-                <source src={item.video} type="video/mp4" />
-              </video>
-              <h3>{item.title}</h3>
-              <p>{item.desc}</p>
+            <div className="card-wrapper" key={idx}>
+              <div className="service-card">
+                <video autoPlay muted loop playsInline className="card-video">
+                  <source src={item.video} type="video/mp4" />
+                </video>
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
+              </div>
             </div>
           ))}
         </div>
