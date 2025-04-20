@@ -51,9 +51,14 @@ export default function Navbar() {
                 <div className="dropdown">
                   {subItems.map((item, i) => {
                     const isTransac = item.toLowerCase() === 'transac';
-                    const href = isTransac ? '/transac' : '/';
+                    const isFrontend = item.toLowerCase() === 'frontend web design';
+                    const href = isTransac
+                      ? '/transac'
+                      : isFrontend
+                      ? '/frontend-web-design'
+                      : '/';
 
-                    return isTransac ? (
+                    return isTransac || isFrontend ? (
                       <a
                         href={href}
                         target="_blank"
