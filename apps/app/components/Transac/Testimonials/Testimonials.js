@@ -1,4 +1,3 @@
-// components/Transac/Testimonials/Testimonials.js
 'use client';
 
 import styles from './Testimonials.module.css';
@@ -6,19 +5,18 @@ import Image from 'next/image';
 
 export default function Testimonials() {
   return (
-    <section className={styles.testimonialSection}>
+    <section className={styles.testimonialSection} id="testimonial">
       <h2 className={styles.heading}>Powering the Future of Retail</h2>
 
       <div className={styles.logoRow}>
-  <Image
-    src="/logo.svg"
-    alt="Baltar Inc"
-    width={120}
-    height={40}
-    className={styles.logoImage}
-  />
-</div>
-
+        <Image
+          src="/logo.svg"
+          alt="Baltar Inc"
+          width={120}
+          height={40}
+          className={styles.logoImage}
+        />
+      </div>
 
       <div className={styles.testimonialBox}>
         <div className={styles.videoWrapper}>

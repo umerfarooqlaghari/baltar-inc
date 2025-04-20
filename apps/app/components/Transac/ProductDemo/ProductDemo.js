@@ -7,7 +7,7 @@ export default function ProductDemo() {
   const [selected, setSelected] = useState('Clover');
 
   return (
-    <section className={styles.demoSection}>
+    <section className={styles.demoSection} id="demo">
       <h2 className={styles.heading}>Watch Transac in Action</h2>
       <div className={styles.wrapper}>
         <div className={styles.left}>

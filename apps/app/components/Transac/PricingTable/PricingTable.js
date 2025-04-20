@@ -26,7 +26,7 @@ const plans = [
 
 export default function PricingTable() {
   return (
-    <section className={styles.pricingSection}>
+    <section className={styles.pricingSection} id="pricing">
       <h2 className={styles.heading}>Pricing for Every Business Size</h2>
       <div className={styles.grid}>
         {plans.map((plan, idx) => (

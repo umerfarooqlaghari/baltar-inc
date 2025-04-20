@@ -20,7 +20,7 @@ const cards = [
 
 export default function TransacValueProps() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="why">
       <h2 className={styles.heading}>
         Why 3,000+ Canadian Businesses Choose Transac
       </h2>
