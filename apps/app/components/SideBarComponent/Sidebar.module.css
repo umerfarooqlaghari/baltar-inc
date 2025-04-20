@@ -1,0 +1,83 @@
+.sidebar {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 50; 
+  transition: width 0.3s ease;
+  background-color: white;
+  border-right: 1px solid #e5e7eb;
+  overflow: visible;
+  }
+  
+  
+  .sidebarOpen {
+    width: 16rem; /* 64 Tailwind */
+  }
+  
+  .sidebarCollapsed {
+    width: 2rem; /* 16 Tailwind */
+  }
+  
+  .toggleBtn {
+    position: absolute;
+    top: 1.25rem;
+    right: -1rem;
+    background-color: #e5e7eb;
+    border-radius: 9999px;
+    width: 2rem;
+    height: 2rem;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .nav {
+    padding: 1rem 0.5rem;
+    overflow-y: auto;
+    flex-grow: 1;
+  }
+  
+  .navItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .navItem:hover {
+    background-color:rgb(62, 85, 132);
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .subMenu {
+    padding-left: 2rem;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    color:rgb(21, 22, 24);
+  }
+  
+  .subMenuItem {
+    margin-bottom: 0.25rem;
+    cursor: pointer;
+  }
+  
+  .subMenuItem:hover {
+    color: #2563EB;
+  }
+  

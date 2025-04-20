@@ -1,0 +1,159 @@
+.frontend-container {
+    background-color: #0f1115;
+    color: white;
+    overflow-x: hidden;
+  }
+  
+  /* 1. Hero Section */
+  .hero-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.8;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 3rem 2rem;
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    color: #e5e7eb;
+  }
+  
+  /* 2. AI Audit Section */
+  .feature-audit-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .audit-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.8;
+    pointer-events: none;
+  }
+  
+  .audit-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .audit-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem 2.5rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .audit-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: white;
+  }
+  
+  .audit-card p {
+    font-size: 1.1rem;
+    color: #d1d5db;
+  }
+  
+  /* 3. Smart Web Services */
+  .grid-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .grid-section h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    overflow: visible;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .card-wrapper {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .service-card {
+    background-color: #1a1d22;
+    border-radius: 1rem;
+    width: 300px;
+    padding: 2rem 1.5rem;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+  }
+  
+  .service-card:hover {
+    transform: scale(1.4);
+    z-index: 10;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+  
+  .card-video {
+    width: 100%;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .service-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .service-card p {
+    font-size: 0.95rem;
+    color: #d1d5db;
+  }
+  
