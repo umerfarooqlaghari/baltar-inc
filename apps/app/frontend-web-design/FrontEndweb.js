@@ -44,7 +44,7 @@ export default function FrontEndWebDesign() {
               video: '/graphs.mp4',
             },
             {
-              title: 'Booking System',
+              title: 'Design Consultation Booking',
               desc: 'Schedule discovery calls or project meetings in seconds through an intuitive self-booking interface.',
               video: '/booking.mp4',
             },
@@ -55,7 +55,7 @@ export default function FrontEndWebDesign() {
             },
             {
               title: 'Subscription Maintenance',
-              desc: 'Offer your clients monthly maintenance with auto-renew billing and on-demand support.',
+              desc: 'Offer your clients monthly maintenance with auto-renew billing and on-demand support for your futuristic applications.',
               video: '/subscribe.mp4',
             },
           ].map((item, idx) => (
