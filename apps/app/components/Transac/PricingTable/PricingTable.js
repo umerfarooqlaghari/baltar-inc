@@ -1,4 +1,3 @@
-// components/Transac/PricingTable/PricingTable.js
 'use client';
 
 import styles from './PricingTable.module.css';
@@ -44,7 +43,7 @@ export default function PricingTable() {
               ))}
             </ul>
             <div className={styles.tooltip}>Best For: {plan.bestFor}</div>
-            <button className={styles.cta}>Calculate Your Savings</button>
+            <a href="/coming-soon" className={styles.cta}>Calculate Your Savings</a>
           </div>
         ))}
       </div>

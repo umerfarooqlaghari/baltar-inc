@@ -1,22 +1,22 @@
 export default function HeroSection() {
   return (
-    <section className="w-full h-screen relative overflow-hidden">
+    <section className="w-full h-screen relative overflow-hidden bg-black">
       {/* 🔁 Background Video */}
       <video
         autoPlay
         muted
         loop
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        className="absolute top-0 left-0 w-full h-full object-cover opacity-80 z-0"
       >
-        <source src="/Video.mp4" type="video/mp4" />
+        <source src="/video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      {/* 🛡️ Stronger Black Overlay */}
-      <div className="absolute inset-0 bg-black/80 z-10" />
+      {/* 🛡️ Black overlay */}
+      <div className="absolute inset-0 bg-black/50 z-10" />
 
-      {/* 🧠 Hero Text */}
+      {/* ✨ Text on top */}
       <div className="relative z-20 h-full flex flex-col justify-center items-center text-center px-6">
         <h1 className="text-white text-5xl md:text-6xl font-extrabold leading-tight drop-shadow-[0_0_40px_rgba(255,255,255,1)]">
           Welcome to Baltar Inc

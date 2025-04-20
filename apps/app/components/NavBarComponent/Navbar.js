@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useRef } from 'react';
-import './Navbar.css';
+import './navbar.css';
 
 const navItems = {
   Finance: ['Wealth Management', 'Transac'],
@@ -52,13 +52,14 @@ export default function Navbar() {
                   {subItems.map((item, i) => {
                     const isTransac = item.toLowerCase() === 'transac';
                     const isFrontend = item.toLowerCase() === 'frontend web design';
+
                     const href = isTransac
                       ? '/transac'
                       : isFrontend
                       ? '/frontend-web-design'
-                      : '/';
+                      : '/coming-soon';
 
-                    return isTransac || isFrontend ? (
+                    return (isTransac || isFrontend) ? (
                       <a
                         href={href}
                         target="_blank"

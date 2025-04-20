@@ -1,4 +1,3 @@
-// components/Transac/ProductDemo/ProductDemo.js
 'use client';
 
 import { useState } from 'react';
@@ -37,7 +36,7 @@ export default function ProductDemo() {
             className={styles.demoVideo}
             poster="/demo-poster.png"
           />
-          <a href="#" className={styles.demoButton}>Try Live Demo →</a>
+          <a href="/coming-soon" className={styles.demoButton}>Try Live Demo →</a>
         </div>
       </div>
     </section>

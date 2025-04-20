@@ -23,7 +23,7 @@ export default function TransacHero() {
         </p>
 
         <div className={styles.heroButtons}>
-          <a href="/solutions" className={styles.buttonPrimary}>For Merchants →</a>
+          <a href="/coming-soon" className={styles.buttonPrimary}>For Merchants →</a>
           <a href="https://play.google.com" target="_blank" className={styles.buttonSecondary}>Get the App →</a>
         </div>
       </div>
