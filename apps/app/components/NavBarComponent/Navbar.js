@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useRef } from 'react';
 import './Navbar.css';
 
@@ -25,13 +26,16 @@ export default function Navbar() {
   const handleMouseLeave = () => {
     timeoutRef.current = setTimeout(() => {
       setActive(null);
-    }, 150); // delay so you can move mouse down into the dropdown
+    }, 150);
   };
 
   return (
     <nav className="navbar">
       <div className="navbar-content">
-        <div className="logo">Baltar Inc</div>
+        <div className="logo-with-icon">
+          <Image src="/logo.svg" alt="Baltar Inc Logo" width={28} height={28} />
+          <span className="logo-text">Baltar Inc</span>
+        </div>
 
         <div className="nav-links">
           {Object.entries(navItems).map(([heading, subItems], idx) => (

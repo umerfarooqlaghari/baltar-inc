@@ -16,10 +16,24 @@
   align-items: center;
 }
 
-.logo {
+/* Logo section with icon and text */
+.logo-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 1;
+}
+
+.logo-with-icon img {
+  display: block;
+  margin-top: 1px; /* fine-tune alignment */
+}
+
+.logo-text {
   font-size: 1.25rem;
   font-weight: bold;
   color: #1f2937;
+  margin-top: 1px; /* fine-tune vertical alignment */
 }
 
 .nav-links {
@@ -35,6 +49,7 @@
   cursor: pointer;
   font-weight: 500;
   color: #4b5563;
+  transition: color 0.2s ease;
 }
 
 .nav-item:hover {
@@ -61,6 +76,7 @@
   color: #4b5563;
   text-decoration: none;
   white-space: nowrap;
+  transition: background 0.2s, color 0.2s;
 }
 
 .dropdown-item:hover {
