@@ -1,7 +1,21 @@
 'use client';
+import { useEffect, useState, useRef } from 'react';
 import './FrontEndWeb.css';
 
 export default function FrontEndWebDesign() {
+  const auditRef = useRef();
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { threshold: 0.5 }
+    );
+
+    if (auditRef.current) observer.observe(auditRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="frontend-container">
       {/* 1. Hero Section */}
@@ -18,11 +32,16 @@ export default function FrontEndWebDesign() {
         </div>
       </section>
 
-      {/* 2. AI Website Audit Tool Section */}
-      <section className="feature-audit-section">
-        <video autoPlay muted loop playsInline className="audit-video">
-          <source src="/AIAudit.mp4" type="video/mp4" />
-        </video>
+      {/* 2. AI Website Audit Tool Section (Split Animation) */}
+      <section className="feature-audit-section" ref={auditRef}>
+        <div className="video-wrapper">
+          <video autoPlay muted loop playsInline className={`audit-video ${inView ? 'joined' : ''}`}>
+            <source src="/AIAudit.mp4" type="video/mp4" />
+          </video>
+          <div className={`video-slice left ${inView ? 'joined' : ''}`}></div>
+          <div className={`video-slice right ${inView ? 'joined' : ''}`}></div>
+        </div>
+
         <div className="audit-content">
           <div className="audit-card">
             <h2>AI Website Audit Tool</h2>
@@ -37,7 +56,7 @@ export default function FrontEndWebDesign() {
       <section className="grid-section">
         <h2>Smart Web Services</h2>
         <div className="card-grid">
-          {[
+          {[ 
             {
               title: 'Client Dashboard',
               desc: 'Track project status, invoices, file uploads, and team communication – all from a secure dashboard.',
