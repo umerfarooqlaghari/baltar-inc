@@ -2,7 +2,10 @@
   position: relative;
   height: 100vh;
   width: 100%;
-  overflow: hidden;
+  max-width: 100%;        /* ✅ ensures no overflow */
+  overflow-x: hidden;     /* ✅ fix horizontal scroll */
+  overflow-y: hidden;     /* optional if video is large */
+  box-sizing: border-box; /* ✅ always a good practice */
 }
 
 .hero-video {

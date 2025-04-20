@@ -5,7 +5,7 @@ import { useState, useRef } from 'react';
 import './Navbar.css';
 
 const navItems = {
-  Finance: ['Wealth Management'],
+  Finance: ['Wealth Management', 'Transac'],
   Technology: ['Frontend Web Design', 'Cre8ive Studio'],
   Consulting: ['Archon Engineering'],
   Hospitality: ['Savour & Sip'],
@@ -49,11 +49,26 @@ export default function Navbar() {
 
               {active === heading && (
                 <div className="dropdown">
-                  {subItems.map((item, i) => (
-                    <Link href="/" key={i} className="dropdown-item">
-                      {item}
-                    </Link>
-                  ))}
+                  {subItems.map((item, i) => {
+                    const isTransac = item.toLowerCase() === 'transac';
+                    const href = isTransac ? '/transac' : '/';
+
+                    return isTransac ? (
+                      <a
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        key={i}
+                        className="dropdown-item"
+                      >
+                        {item}
+                      </a>
+                    ) : (
+                      <Link href={href} key={i} className="dropdown-item">
+                        {item}
+                      </Link>
+                    );
+                  })}
                 </div>
               )}
             </div>
