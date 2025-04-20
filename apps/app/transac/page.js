@@ -5,7 +5,6 @@ import PricingTable from '../components/Transac/PricingTable/PricingTable';
 import Testimonials from '../components/Transac/Testimonials/Testimonials';
 import AppDownload from '../components/Transac/AppDownload/AppDownload';
 import Footer from '../components/Transac/FooterComponent/Footer';
-import TransacHeader from '../components/Transac/HeaderComponent/TransacHeader';
 
 
 export default function TransacPage() {
