@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useRef } from 'react';
-import './Navbar.css';
+import './navbar.css';
 
 const navItems = {
   Finance: ['Wealth Management', 'Transac'],
