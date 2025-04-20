@@ -52,13 +52,14 @@ export default function Navbar() {
                   {subItems.map((item, i) => {
                     const isTransac = item.toLowerCase() === 'transac';
                     const isFrontend = item.toLowerCase() === 'frontend web design';
+
                     const href = isTransac
                       ? '/transac'
                       : isFrontend
                       ? '/frontend-web-design'
-                      : '/';
+                      : '/coming-soon';
 
-                    return isTransac || isFrontend ? (
+                    return (isTransac || isFrontend) ? (
                       <a
                         href={href}
                         target="_blank"
