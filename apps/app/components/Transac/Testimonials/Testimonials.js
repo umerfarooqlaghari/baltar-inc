@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function Testimonials() {
   return (
-    <section className={styles.testimonialSection} id="testimonial">
+    <section className={styles.testimonialSection} id="testimonials">
       <h2 className={styles.heading}>Powering the Future of Retail</h2>
 
       <div className={styles.logoRow}>
