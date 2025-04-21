@@ -34,7 +34,7 @@ export default function ProductDemo() {
             src="/transac-demo.mp4"
             controls
             className={styles.demoVideo}
-            poster="/demo-poster.png"
+            poster="/transac-demo.png"
           />
           <a href="/coming-soon" className={styles.demoButton}>Try Live Demo →</a>
         </div>

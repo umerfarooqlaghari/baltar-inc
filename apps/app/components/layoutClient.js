@@ -12,6 +12,7 @@ export default function LayoutClient({ children }) {
   const isFrontendDesign = pathname === '/frontend-web-design';
   const isComingSoonPage = pathname === '/coming-soon';
   const isAuthPage = pathname === '/signup' || pathname === '/login';
+  const isTransacComingSoonPage = pathname === '/transac-coming-soon';
 
   return (
     <div className="w-full overflow-x-hidden bg-black text-white font-sans min-h-screen">
@@ -19,14 +20,14 @@ export default function LayoutClient({ children }) {
         <div className="flex flex-col flex-1 w-full">
 
           {/* ✅ Show TransacHeader on /transac, Navbar on others except /signup & /signin */}
-          {!isAuthPage && (
+          {!isAuthPage && !isTransacComingSoonPage && (
             isTransac ? <TransacHeader /> : <Navbar />
           )}
 
           <main className="flex-1 w-full">{children}</main>
 
           {/* ✅ Hide Footer on /transac, /coming-soon, /signup, /signin */}
-          {!isTransac && !isComingSoonPage && !isAuthPage && <Footer />}
+          {!isTransac && !isTransacComingSoonPage && !isComingSoonPage && !isAuthPage && <Footer />}
         </div>
       </div>
     </div>

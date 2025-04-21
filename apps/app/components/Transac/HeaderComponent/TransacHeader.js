@@ -31,13 +31,11 @@ export default function TransacHeader() {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        {/* 🔥 Transac Logo with Flair */}
         <Link href="/transac" className={styles.logoWithIcon}>
           <Image src="/logo.svg" alt="Baltar Inc Logo" width={28} height={28} />
           <span className={styles.logoText}>Transac</span>
         </Link>
 
-        {/* 🧭 Navigation Links */}
         <nav className={styles.navbar}>
           <div className={styles.navLinks}>
             {navItems.map((item, index) => (
@@ -46,7 +44,6 @@ export default function TransacHeader() {
               </a>
             ))}
 
-            {/* 📚 Dropdown for Resources */}
             <div
               onMouseEnter={() => handleMouseEnter('resources')}
               onMouseLeave={handleMouseLeave}
@@ -55,20 +52,18 @@ export default function TransacHeader() {
               <span className={styles.navItem}>Resources</span>
               {active === 'resources' && (
                 <div className={styles.dropdown}>
-                  <Link href="/coming-soon" className={styles.dropdownItem}>Compliance</Link>
-                  <Link href="/coming-soon" className={styles.dropdownItem}>Hardware</Link>
-                  <Link href="/coming-soon" className={styles.dropdownItem}>Loyalty</Link>
-                  <Link href="/coming-soon" className={styles.dropdownItem}>Integrations</Link>
+                  <Link href="/compliance" className={styles.dropdownItem}>Compliance</Link>
+                  <Link href="/hardware" className={styles.dropdownItem}>Hardware</Link>
+                  <Link href="/loyalty" className={styles.dropdownItem}>Loyalty</Link>
+                  <Link href="/integrations" className={styles.dropdownItem}>Integrations</Link>
                 </div>
               )}
             </div>
 
-            {/* 🚀 Join Transac CTA */}
             <Link href="/signup" className={`${styles.navItem} ${styles.ctaButton}`}>
               Join Transac
             </Link>
 
-            {/* ✨ Already onboard? Sign In */}
             <span className={styles.signInPrompt}>
               Already onboard?&nbsp;
               <Link href="/login" className={styles.signInLink}>

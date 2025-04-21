@@ -1,16 +1,17 @@
+// SignupPage.js
 'use client';
 import { useState } from 'react';
 import SubscriptionTier from '../components/auth/SubscriptionTier';
+import './signup.css'; // ✅ Make sure this is present
 
 export default function SignupPage() {
   const [selectedPlan, setSelectedPlan] = useState('');
-  
-  return (
-    <div style={{ background: '#0f1115', color: 'white', minHeight: '100vh' }}>
-      <h1 style={{ textAlign: 'center', paddingTop: '2rem' }}>Create Account</h1>
 
-      {/* Basic Form Inputs */}
-      <form style={{ maxWidth: '600px', margin: 'auto', padding: '2rem' }}>
+  return (
+    <div className="signup-container">
+      <h1 className="signup-heading">Create Account</h1>
+
+      <form className="signup-form">
         <input placeholder="First Name" className="form-input" />
         <input placeholder="Last Name" className="form-input" />
         <input placeholder="Email" type="email" className="form-input" />
