@@ -1,11 +1,11 @@
 import HeroSection from './components/HeroComponent/HeroSection';
-import FeatureBoxes from './components/FeatureBoxComponent/FeatureBoxes';
+import FeatureVideos from './components/FeatureVideos/FeatureVideos';
 
 export default function Home() {
   return (
     <>
       <HeroSection />
-      <FeatureBoxes />
+      <FeatureVideos />
     </>
   );
 }
