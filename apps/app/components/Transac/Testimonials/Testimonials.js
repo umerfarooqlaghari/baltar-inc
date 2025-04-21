@@ -20,7 +20,7 @@ export default function Testimonials() {
 
       <div className={styles.testimonialBox}>
         <div className={styles.videoWrapper}>
-          <video controls poster="/testimonial-thumb.jpg" className={styles.video}>
+          <video controls poster="/testimonial.png" className={styles.video}>
             <source src="/testimonial.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>

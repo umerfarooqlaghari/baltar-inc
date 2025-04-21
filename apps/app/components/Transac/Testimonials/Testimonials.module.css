@@ -1,84 +1,95 @@
-/* components/Transac/Testimonials/Testimonials.module.css */
-
 .testimonialSection {
-    background-color: #0f1115;
-    padding: 4rem 2rem;
-    color: white;
-    text-align: center;
-    overflow-x: hidden;
-    max-width: 100vw;
-    box-sizing: border-box;
-  }
-  
+  background-color: #fefefe;
+  padding: 4rem 2rem;
+  color: #1f2937;
+  text-align: center;
+  overflow-x: hidden;
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 2.5rem;
+}
+
+.logoRow {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.logoImage {
+  width: 120px;
+  height: auto;
+  opacity: 0.95;
+  transition: transform 0.2s ease;
+}
+
+.logoImage:hover {
+  transform: scale(1.05);
+}
+
+.testimonialBox {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+}
+
+.videoWrapper {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.08);
+}
+
+.video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.quote p {
+  font-size: 1.125rem;
+  font-style: italic;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.quote span {
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+/* 📱 Mobile View */
+@media (max-width: 768px) {
   .heading {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
+    font-size: 1.6rem;
   }
-  
-  .logoRow {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-bottom: 3rem;
-    align-items: center;
-    max-width: 100%;
-  }
-  
+
   .testimonialBox {
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
-    box-sizing: border-box;
+    padding: 1.5rem;
   }
-  
-  .videoWrapper {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 0.75rem;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
-    box-sizing: border-box;
-  }
-  
-  .video {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
+
   .quote p {
-    font-size: 1.125rem;
-    color: #e5e7eb;
-    font-style: italic;
-    margin-bottom: 0.5rem;
+    font-size: 1rem;
   }
-  
+
   .quote span {
-    font-size: 0.95rem;
-    color: #9ca3af;
+    font-size: 0.85rem;
   }
-  .logoRow {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-bottom: 3rem;
-    align-items: center;
-  }
-  
-  .logoImage {
-    width: 120px;
-    height: auto;
-    opacity: 0.9;
-    transition: transform 0.2s ease;
-  }
-  
-  .logoImage:hover {
-    transform: scale(1.05);
-  }
-  
+}
