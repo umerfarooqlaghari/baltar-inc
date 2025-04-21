@@ -1,4 +1,5 @@
 'use client';
+
 import { useState } from 'react';
 import ForgotPasswordModal from '../components/auth/ForgotPasswordModal';
 import './login.css';
