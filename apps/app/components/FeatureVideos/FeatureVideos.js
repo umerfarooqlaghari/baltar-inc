@@ -105,15 +105,31 @@ export default function FeatureVideos() {
           />
 
           <div className={styles.subsidiaries}>
-            {service.subsidiaries.map((sub, i) => (
-              <div key={i} className={styles.subCard}>
-                <h4>{sub.name}</h4>
-                <p>{sub.desc}</p>
-                <a href={getHref(sub.name)} className={styles.subButton}>
-                  {sub.cta}
-                </a>
-              </div>
-            ))}
+            {service.subsidiaries.map((sub, i) => {
+              const href = getHref(sub.name);
+              const openInNewTab = ['transac', 'frontend web design'].includes(sub.name.toLowerCase());
+
+              return (
+                <div key={i} className={styles.subCard}>
+                  <h4>{sub.name}</h4>
+                  <p>{sub.desc}</p>
+                  {openInNewTab ? (
+                    <a
+                      href={href}
+                      className={styles.subButton}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {sub.cta}
+                    </a>
+                  ) : (
+                    <a href={href} className={styles.subButton}>
+                      {sub.cta}
+                    </a>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
       ))}
