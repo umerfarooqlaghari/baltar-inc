@@ -1,0 +1,67 @@
+.auditSection {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backgroundVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  z-index: 0;
+  transition: transform 0.6s ease;
+}
+
+.auditSection:hover .backgroundVideo {
+  transform: scale(1.05); /* Zoom in on hover */
+}
+
+.overlayCard {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.your-card-class {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.your-card-class:hover {
+  transform: scale(1.03);
+}
+
+.linkWrapper {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
