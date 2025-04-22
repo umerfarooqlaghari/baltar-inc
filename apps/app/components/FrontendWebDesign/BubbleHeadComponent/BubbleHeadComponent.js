@@ -31,7 +31,7 @@ export default function BubbleHeadComponent() {
   }, []);
 
   const handleClick = () => {
-    router.push('/contact-us');
+    router.push('/frontend-web-design-contact-us'); // ✅ Correct route here
   };
 
   return (
