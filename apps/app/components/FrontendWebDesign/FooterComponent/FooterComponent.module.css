@@ -1,0 +1,148 @@
+.footer {
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+    color: white;
+  }
+  
+  .followUsSection {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .bgVideo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.25;
+  }
+  
+  .followText {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    z-index: 1;
+  }
+  
+  .circle {
+    font-size: 0.85rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 1rem;
+    text-align: center;
+    animation: spin 10s linear infinite;
+  }
+  
+  @keyframes spin {
+    100% { transform: rotate(360deg); }
+  }
+  
+  .followText h2 {
+    font-size: 4rem;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  
+  .linksSection {
+    padding: 4rem 2rem;
+    background-color: black;
+  }
+  
+  .linksSection h3 {
+    color: #ccc;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+  
+  .linksGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .linkItem {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 300;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .linkItem:hover {
+    color: black;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+  }
+  
+  .arrow {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+  }
+  
+  .contactSection {
+    position: relative;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  
+  .contactVideo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.3;
+  }
+  
+  .contactOverlay {
+    z-index: 1;
+    text-align: center;
+  }
+  
+  .contactOverlay h1 {
+    font-size: 4rem;
+    font-weight: 500;
+  }
+  
+  .contactOverlay i {
+    font-style: italic;
+  }
+  
+  .tellUsBtn {
+    margin-top: 2rem;
+    padding: 1.2rem 3rem;
+    font-size: 2rem;
+    border: 2px solid white;
+    background: white;
+    color: black;
+    border-radius: 100px;
+    transition: all 0.3s ease;
+  }
+  
+  .tellUsBtn:hover {
+    background: black;
+    color: white;
+  }
+  
+  .contactDetails {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 0.9rem;
+    color: #ddd;
+  }
+  
