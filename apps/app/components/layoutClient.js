@@ -3,10 +3,12 @@
 import { usePathname } from 'next/navigation';
 import Navbar from './NavBarComponent/Navbar';
 import Footer from './FooterComponent/Footer';
-import TransacHeader from './Transac/HeaderComponent/TransacHeader'; // ✅ Import TransacHeader
+import TransacHeader from './Transac/HeaderComponent/TransacHeader';
+import FrontendHeader from './FrontendWebDesign/HeaderComponent/HeaderComponent'; // ✅ Import Frontend Header
 
 export default function LayoutClient({ children }) {
   const pathname = usePathname();
+
   const isHome = pathname === '/';
   const isTransac = pathname === '/transac';
   const isFrontendDesign = pathname === '/frontend-web-design';
@@ -19,15 +21,21 @@ export default function LayoutClient({ children }) {
       <div className="flex w-full min-h-screen">
         <div className="flex flex-col flex-1 w-full">
 
-          {/* ✅ Show TransacHeader on /transac, Navbar on others except /signup & /signin */}
+          {/* ✅ Header Logic */}
           {!isAuthPage && !isTransacComingSoonPage && (
-            isTransac ? <TransacHeader /> : <Navbar />
+            isTransac 
+              ? <TransacHeader />
+              : isFrontendDesign 
+                ? <FrontendHeader /> 
+                : <Navbar />
           )}
 
           <main className="flex-1 w-full">{children}</main>
 
-          {/* ✅ Hide Footer on /transac, /coming-soon, /signup, /signin */}
-          {!isTransac && !isTransacComingSoonPage && !isComingSoonPage && !isAuthPage && <Footer />}
+          {/* ✅ Footer Logic */}
+          {!isTransac && !isTransacComingSoonPage && !isComingSoonPage && !isAuthPage && !isFrontendDesign && (
+            <Footer />
+          )}
         </div>
       </div>
     </div>

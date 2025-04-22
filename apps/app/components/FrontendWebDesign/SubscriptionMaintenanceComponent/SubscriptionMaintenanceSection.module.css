@@ -1,0 +1,55 @@
+.maintenanceSection {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+  
+  .backgroundVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    transition: transform 1s ease;
+  }
+  
+  .zoomIn {
+    transform: scale(1.1);
+  }
+  
+  .zoomOut {
+    transform: scale(1);
+  }
+  
+  .textCard {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 2.5rem 3rem;
+    max-width: 700px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  }
+  
+  .textCard h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .textCard p {
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
