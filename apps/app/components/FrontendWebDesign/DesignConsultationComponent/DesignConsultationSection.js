@@ -1,4 +1,6 @@
 'use client';
+import Link from 'next/link';
+
 import { useEffect, useRef, useState } from 'react';
 import styles from './DesignConsultationSection.module.css';
 
@@ -17,7 +19,7 @@ export default function DesignConsultationSection() {
   }, []);
 
   return (
-    <section
+    <section id="booking"
       ref={sectionRef}
       className={`${styles.consultationSection} ${inView ? styles.active : ''}`}
     >
@@ -29,6 +31,9 @@ export default function DesignConsultationSection() {
         muted
         playsInline
       />
+            <Link href="/frontend-web-design-comingsoon" passHref legacyBehavior>
+            <a className={styles.linkWrapper}>
+
       <div className={styles.textCard}>
         <h2>Book a Design Consultation</h2>
         <p>
@@ -36,6 +41,8 @@ export default function DesignConsultationSection() {
           or an idea, let’s design your vision together.
         </p>
       </div>
+      </a>
+      </Link>
     </section>
   );
 }

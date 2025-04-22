@@ -2,8 +2,8 @@
   display: flex;
   justify-content: space-between;
   padding: 1.5rem 2rem;
-  background: white; /* ✅ Changed from transparent */
-  color: black;       /* ✅ Changed from white */
+  background: white;
+  color: black;
   position: relative;
   z-index: 50;
   font-family: 'Segoe UI', sans-serif;
@@ -11,7 +11,7 @@
 
 .menu-button {
   background: none;
-  color: black;  /* ✅ Changed from white */
+  color: black;
   border: none;
   cursor: pointer;
   font-size: 1rem;
@@ -23,9 +23,8 @@
 .header-title {
   font-size: 1.2rem;
   font-weight: 600;
-  color: black; /* ✅ Ensuring black here too */
+  color: black;
 }
-
 
 .hamburger {
   font-size: 1.3rem;
@@ -83,7 +82,6 @@
   font-size: 1rem;
   transition: transform 0.3s ease;
   cursor: pointer;
-  position: relative;
 }
 
 .menu-right li:hover {
@@ -100,6 +98,22 @@
 .contact-block {
   margin-top: 2rem;
   font-size: 0.9rem;
+}
+
+/* ✅ Make links look like plain text */
+.menu-content a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.menu-content a:hover {
+  color: #888;
+}
+
+/* ✅ Hide bullets */
+.menu-content li {
+  list-style: none;
 }
 
 .cursor-circle {

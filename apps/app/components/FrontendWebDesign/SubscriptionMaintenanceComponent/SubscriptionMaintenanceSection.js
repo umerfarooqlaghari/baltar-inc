@@ -1,4 +1,6 @@
 'use client';
+import Link from 'next/link';
+
 import { useEffect, useRef, useState } from 'react';
 import styles from './SubscriptionMaintenanceSection.module.css';
 
@@ -16,7 +18,7 @@ export default function SubscriptionMaintenanceSection() {
   }, []);
 
   return (
-    <section
+    <section id="subscription"
       ref={sectionRef}
       className={`${styles.maintenanceSection} ${inView ? styles.active : ''}`}
     >
@@ -28,6 +30,9 @@ export default function SubscriptionMaintenanceSection() {
         muted
         playsInline
       />
+            <Link href="/frontend-web-design-comingsoon" passHref legacyBehavior>
+            <a className={styles.linkWrapper}>
+
       <div className={styles.textCard}>
         <h2>Subscription-Based Website Maintenance</h2>
         <p>
@@ -35,6 +40,8 @@ export default function SubscriptionMaintenanceSection() {
           From security patches to design tweaks — we ensure your site is always updated and performing.
         </p>
       </div>
+      </a>
+      </Link>
     </section>
   );
 }

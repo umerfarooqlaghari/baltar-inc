@@ -1,4 +1,6 @@
 'use client';
+import Link from 'next/link';
+
 import { useEffect, useRef, useState } from 'react';
 import styles from './SEOReportsSection.module.css';
 
@@ -16,7 +18,7 @@ export default function SEOReportsSection() {
   }, []);
 
   return (
-    <section
+    <section id="seo"
       ref={sectionRef}
       className={`${styles.seoSection} ${inView ? styles.active : ''}`}
     >
@@ -28,6 +30,9 @@ export default function SEOReportsSection() {
         muted
         playsInline
       />
+            <Link href="/frontend-web-design-comingsoon" passHref legacyBehavior>
+            <a className={styles.linkWrapper}>
+
       <div className={styles.textCard}>
         <h2>Automated SEO Reports</h2>
         <p>
@@ -35,6 +40,8 @@ export default function SEOReportsSection() {
           optimization tips, our system keeps your site ready to rank.
         </p>
       </div>
+      </a>
+      </Link>
     </section>
   );
 }

@@ -23,6 +23,10 @@ export default function HeaderComponent() {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, [isMenuOpen]);
 
+  const handleMenuClick = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="cuberto-header">
       <div className="header-title">Frontend Web Design</div>
@@ -38,20 +42,20 @@ export default function HeaderComponent() {
               <div className="menu-left">
                 <p className="menu-heading">Social media</p>
                 <ul>
-                  <li>LinkedIn</li>
-                  <li>Instagram</li>
-                  <li>Twitter</li>
-                  <li>GitHub</li>
+                  <li><a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a></li>
+                  <li><a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a></li>
+                  <li><a href="https://twitter.com" target="_blank" rel="noreferrer">Twitter</a></li>
+                  <li><a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a></li>
                 </ul>
               </div>
               <div className="menu-right">
                 <p className="menu-heading">Menu</p>
                 <ul className="main-links">
-                  <li>AI Website Audit Tool</li>
-                  <li>Client Dashboard</li>
-                  <li>Design Consultation Booking</li>
-                  <li>SEO Reports</li>
-                  <li>Subscription Maintenance</li>
+                  <li><a href="#audit" onClick={handleMenuClick}>AI Website Audit Tool</a></li>
+                  <li><a href="#dashboard" onClick={handleMenuClick}>Client Dashboard</a></li>
+                  <li><a href="#booking" onClick={handleMenuClick}>Design Consultation Booking</a></li>
+                  <li><a href="#seo" onClick={handleMenuClick}>SEO Reports</a></li>
+                  <li><a href="#subscription" onClick={handleMenuClick}>Subscription Maintenance</a></li>
                 </ul>
                 <div className="contact-block">
                   <p>Get in touch</p>
