@@ -1,9 +1,11 @@
+/* Pricing Section */
 .pricingSection {
   padding: 4rem 2rem;
   background-color: #f9fafb;
   color: #1f2937;
   text-align: center;
   box-sizing: border-box;
+  min-height: 100vh;  /* Ensures the section height fills the screen */
 }
 
 .heading {
@@ -16,7 +18,7 @@
 .grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center;  /* Center the cards */
   gap: 2rem;
   width: 100%;
   margin: 0 auto;
@@ -26,8 +28,8 @@
 .card {
   background-color: #ffffff;
   border-radius: 1rem;
-  padding: 2rem;
-  width: 300px;
+  padding: 1rem;
+  width: 300px;  /* Fixed width for cards */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -35,6 +37,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;  /* Prevent cards from shrinking */
 }
 
 .card:hover {
@@ -109,19 +112,32 @@
   color: #fff;
 }
 
-/* 📱 Responsive */
+/* 📱 Mobile Styles */
 @media (max-width: 768px) {
   .grid {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;  /* Arrange cards horizontally on mobile */
+    gap: 2rem;
+    overflow-x: scroll;  /* Allow horizontal scrolling */
+    padding: 1rem;
+    justify-content: flex-start;  /* Align cards to the left */
+    width: 100%;
   }
 
   .card {
-    width: 100%;
-    max-width: 350px;
+    width: 250px;  /* Adjust card width on mobile */
+    flex-shrink: 0;  /* Prevent shrinking */
   }
 
   .heading {
     font-size: 1.6rem;
+  }
+
+  .ctaButton {
+    font-size: 1rem;
+  }
+
+  /* Ensure the section fills the entire viewport height */
+  .pricingSection {
+    min-height: 100vh;
   }
 }
