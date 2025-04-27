@@ -1,0 +1,142 @@
+.subscriptionSection {
+    padding: 6rem 2rem;
+    background-color: #fefefe;
+    color: #111;
+    text-align: center;
+    box-sizing: border-box;
+    min-height: 100vh;
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 4rem;
+    color: #000;
+    letter-spacing: 2px;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .card {
+    background-color: #ffffff;
+    border-radius: 1.5rem;
+    padding: 2rem 2rem 2.5rem; /* bottom padding thoda zyada for button space */
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: visible; /* 💥 This is very important */
+  }
+  
+  .badge {
+    position: absolute;
+    top: -18px; /* 🔥 Little higher for clean floating */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #d4af37;
+    color: black;
+    font-size: 0.75rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 999px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.2); /* Extra luxury shadow */
+  }
+  
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    background: #f7f7f7;
+  }
+  
+  .popular {
+    border: 2px solid #d4af37; /* Light luxury gold */
+  }
+  
+  
+  .title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #111;
+  }
+  
+  .price {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #555;
+  }
+  
+  .features {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    text-align: left;
+    font-size: 0.95rem;
+    color: #333;
+  }
+  
+  .features li {
+    margin-bottom: 0.75rem;
+  }
+  
+  .tooltip {
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+  
+  .cta {
+    margin-top: auto;
+    background: transparent;
+    border: 2px solid #111;
+    padding: 0.8rem 2rem;
+    border-radius: 999px;
+    font-weight: 600;
+    color: #111;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    font-size: 1rem;
+  }
+  
+  .cta:hover {
+    background-color: #111;
+    color: #fff;
+  }
+  
+  /* 📱 Mobile Styles */
+  @media (max-width: 768px) {
+    .grid {
+      flex-direction: row;
+      overflow-x: auto;
+      gap: 2rem;
+      padding: 1rem;
+      justify-content: flex-start;
+      width: 100%;
+    }
+  
+    .card {
+      width: 280px;
+      flex-shrink: 0;
+    }
+  
+    .heading {
+      font-size: 2rem;
+    }
+  }
+  
