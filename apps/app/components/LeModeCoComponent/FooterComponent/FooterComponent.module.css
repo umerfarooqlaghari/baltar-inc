@@ -1,0 +1,115 @@
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 4rem 2rem;
+    font-family: 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  
+  .promoSection {
+    text-align: center;
+  }
+  
+  .promoSection h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  .subscribeLink {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.3s;
+  }
+  
+  .subscribeLink:hover {
+    border-bottom: 1px solid white;
+  }
+  
+  /* Grid for Links */
+  .linksGrid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+  
+  .column {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .column h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    color: #ccc;
+  }
+  
+  .column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .column li {
+    margin-bottom: 1rem;
+  }
+  
+  .column a {
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.3s;
+  }
+  
+  .column a:hover {
+    border-bottom: 1px solid white;
+  }
+  
+  .input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    padding: 0.8rem 0;
+    color: white;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+  }
+  
+  .input::placeholder {
+    color: #aaa;
+  }
+  
+  .policyText {
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+    color: #aaa;
+  }
+  
+  .policyText a {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  /* 📱 Responsive */
+  @media (max-width: 768px) {
+    .linksGrid {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  
+    .promoSection h2 {
+      font-size: 1.5rem;
+    }
+  }
+  

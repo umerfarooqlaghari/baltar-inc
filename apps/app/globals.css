@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --background: #0B0F19;
   --foreground: #171717;
