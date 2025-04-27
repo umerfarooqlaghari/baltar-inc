@@ -36,6 +36,7 @@
 /* Logo */
 .logo {
   text-align: center;
+  position: relative;
 }
 
 .logo a {
@@ -48,6 +49,7 @@
   letter-spacing: 5px;
   margin: 0;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 /* Contact Link */
@@ -146,6 +148,56 @@
   padding: 20px 50px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.5s ease;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .navBar {
+    padding: 1rem 1.5rem;
+    flex-wrap: nowrap;
+    position: relative;
+  }
+
+  .navLeft {
+    display: none; /* Hide Contact Us on Mobile */
+  }
+
+  .logo {
+    position: absolute;
+    left: 22%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .logo h1 {
+    font-size: 22px;
+    letter-spacing: 3px;
+  }
+
+  .navRight {
+    flex: 0 0 auto;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  .navIcons {
+    gap: 10px;
+    position: absolute;
+    left: 55%;
+
+  }
+
+  .icon {
+    width: 20px;
+  }
+
+  .menuToggle {
+    font-size: 12px;
+  }
+
+  .hamburgerSymbol {
+    font-size: 20px;
+  }
 }
 
 /* Logo Vibrate */

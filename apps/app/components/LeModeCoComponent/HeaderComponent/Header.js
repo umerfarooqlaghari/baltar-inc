@@ -14,7 +14,7 @@ const HeaderComponent = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
       if (window.scrollY === 0) {
-        setVibrateKey(prev => prev + 1);
+        setVibrateKey((prev) => prev + 1);
       }
     };
     window.addEventListener("scroll", handleScroll);
@@ -39,7 +39,7 @@ const HeaderComponent = () => {
   }, [isMenuOpen]);
 
   const toggleMenu = () => {
-    setIsMenuOpen(prev => !prev);
+    setIsMenuOpen((prev) => !prev);
   };
 
   const menuItems = [
@@ -52,6 +52,7 @@ const HeaderComponent = () => {
       <nav className={styles.navBar}>
         {/* Left Section */}
         <div className={styles.navLeft}>
+          {/* On mobile Contact Us hide kar diya */}
           <a href="/contact" className={styles.contactLink}>+ Contact Us</a>
         </div>
 
@@ -61,10 +62,10 @@ const HeaderComponent = () => {
             href="/"
             key={vibrateKey}
             initial={{ rotate: 0 }}
-            animate={{ 
-              rotate: [0, 2, -2, 2, -2, 0], 
-              x: [0, -3, 3, -3, 3, 0], 
-              y: [0, 2, -2, 2, -2, 0]
+            animate={{
+              rotate: [0, 2, -2, 2, -2, 0],
+              x: [0, -3, 3, -3, 3, 0],
+              y: [0, 2, -2, 2, -2, 0],
             }}
             transition={{ duration: 10, ease: "easeInOut" }}
           >
