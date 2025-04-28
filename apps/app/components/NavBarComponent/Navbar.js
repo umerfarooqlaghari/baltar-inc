@@ -1,8 +1,9 @@
 'use client';
+
+import { useState, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState, useRef } from 'react';
-import './navbar.css';
+import './navbar.css'; // Your updated CSS file
 
 const navItems = {
   Finance: ['Wealth Management', 'Transac'],
@@ -16,6 +17,8 @@ const navItems = {
 
 export default function Navbar() {
   const [active, setActive] = useState(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(null);
   const timeoutRef = useRef(null);
 
   const handleMouseEnter = (key) => {
@@ -29,14 +32,29 @@ export default function Navbar() {
     }, 150);
   };
 
+  const toggleMobileDropdown = (key) => {
+    if (mobileDropdownOpen === key) {
+      setMobileDropdownOpen(null);
+    } else {
+      setMobileDropdownOpen(key);
+    }
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-content">
-        <div className="logo-with-icon">
+        {/* Logo */}
+        <Link href="/" className="logo-with-icon">
           <Image src="/logo.svg" alt="Baltar Inc Logo" width={28} height={28} />
           <span className="logo-text">Baltar Inc</span>
-        </div>
+        </Link>
 
+        <button className="hamburger" onClick={() => setMobileOpen(true)}>
+        ☰
+       </button>
+
+
+        {/* Desktop Links */}
         <div className="nav-links">
           {Object.entries(navItems).map(([heading, subItems], idx) => (
             <div
@@ -52,7 +70,6 @@ export default function Navbar() {
                   {subItems.map((item, i) => {
                     const isTransac = item.toLowerCase() === 'transac';
                     const isFrontend = item.toLowerCase() === 'frontend web design';
-
                     const href = isTransac
                       ? '/transac'
                       : isFrontend
@@ -80,7 +97,61 @@ export default function Navbar() {
             </div>
           ))}
         </div>
+
+        {/* Mobile Menu */}
+        {mobileOpen && (
+          <div className="mobile-menu">
+            <button
+              className="close-btn"
+              onClick={() => setMobileOpen(false)}
+            >
+              ×
+            </button>
+
+            {Object.entries(navItems).map(([heading, subItems], idx) => (
+              <div key={idx} className="mobile-dropdown-wrapper">
+                <button
+                  className="mobile-dropdown-toggle"
+                  onClick={() => toggleMobileDropdown(heading)}
+                >
+                  {heading}
+                </button>
+
+                {mobileDropdownOpen === heading && (
+                  <div className="mobile-dropdown">
+                    {subItems.map((item, i) => {
+                      const isTransac = item.toLowerCase() === 'transac';
+                      const isFrontend = item.toLowerCase() === 'frontend web design';
+                      const href = isTransac
+                        ? '/transac'
+                        : isFrontend
+                        ? '/frontend-web-design'
+                        : '/coming-soon';
+
+                      return (isTransac || isFrontend) ? (
+                        <a
+                          href={href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          key={i}
+                          className="dropdown-item"
+                          onClick={() => setMobileOpen(false)}
+                        >
+                          {item}
+                        </a>
+                      ) : (
+                        <Link href={href} key={i} className="dropdown-item" onClick={() => setMobileOpen(false)}>
+                          {item}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </nav>
   );
-} 
+}
