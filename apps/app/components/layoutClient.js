@@ -19,6 +19,9 @@ export default function LayoutClient({ children }) {
   const isFrontendComingSoonPage = pathname === '/frontend-web-design-comingsoon';
   const isFrontendContactUsPage = pathname === '/frontend-web-design-contact-us';
   const isLeModeCoPage = pathname === '/le-mode-co';
+  const isLeModeCoComingSoonPage = pathname === '/le-mode-co-comingsoon';
+  const isLeModeCoContactUsPage = pathname === '/le-mode-co-contact-us';
+
 
 
   return (
@@ -27,7 +30,7 @@ export default function LayoutClient({ children }) {
         <div className="flex flex-col flex-1 w-full">
 
           {/* ✅ Header Logic */}
-          {!isAuthPage && !isFrontendContactUsPage&& !isTransacComingSoonPage && !isFrontendComingSoonPage && !isLeModeCoPage &&(
+          {!isAuthPage && !isFrontendContactUsPage&& !isTransacComingSoonPage && !isFrontendComingSoonPage && !isLeModeCoPage && !isLeModeCoComingSoonPage && !isLeModeCoContactUsPage &&(
             isTransac 
               ? <TransacHeader />
               : isFrontendDesign 
@@ -38,7 +41,7 @@ export default function LayoutClient({ children }) {
           <main className="flex-1 w-full">{children}</main>
 
           {/* ✅ Footer Logic */}
-          {!isTransac&& !isFrontendContactUsPage && !isTransacComingSoonPage && !isComingSoonPage && !isAuthPage && !isFrontendDesign && !isFrontendComingSoonPage && !isLeModeCoPage &&(
+          {!isTransac&& !isFrontendContactUsPage && !isTransacComingSoonPage && !isComingSoonPage && !isAuthPage && !isFrontendDesign && !isFrontendComingSoonPage && !isLeModeCoPage && !isLeModeCoComingSoonPage && !isLeModeCoContactUsPage &&(
             <Footer />
           )}
         </div>

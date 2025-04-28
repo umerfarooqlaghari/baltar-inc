@@ -1,0 +1,114 @@
+.contactSection {
+    position: relative;
+    background: #fefefe;
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+  .contactTitle {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 7rem;
+    font-weight: 700;
+    color: #00000010; /* Very light faded black */
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+  }
+  
+  .formContainer {
+    background: #fff;
+    padding: 5rem 2rem 2rem;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 8rem;
+  }
+  
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .row {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .row input {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    border-bottom: 2px solid #111;
+    background: transparent;
+    font-size: 1rem;
+    color: #111;
+  }
+  .textarea {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-bottom: 2px solid #111;
+    background: transparent;
+    font-size: 1rem;
+    color: #111;
+    resize: none;
+    min-height: 120px;
+  }
+  
+  
+  .submitRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .recaptchaPlaceholder {
+    flex: 1;
+    padding: 1rem;
+    border: 2px dashed #aaa;
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+  }
+  
+  .sendButton {
+    background: #111;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .sendButton:hover {
+    background: #333;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .contactTitle {
+      font-size: 4rem;
+    }
+  
+    .row {
+      flex-direction: column;
+    }
+  
+    .submitRow {
+      flex-direction: column;
+    }
+  }
+  

@@ -8,6 +8,7 @@
   border-bottom: 1px solid #e0e0e0;
   font-family: 'Helvetica Neue', sans-serif;
   transition: all 0.5s ease;
+
 }
 
 /* Navbar */
@@ -45,6 +46,7 @@
 }
 
 .logo h1 {
+  font-family: 'EB Garamond', 'Georgia', 'Times New Roman', serif; /* Elegant fonts */
   font-size: 30px;
   letter-spacing: 5px;
   margin: 0;
@@ -82,15 +84,19 @@
   transform: scale(1.1);
 }
 
-/* Menu Toggle */
+
 .menuToggle {
+  font-family: 'EB Garamond', 'Georgia', 'Times New Roman', serif;
   font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 1px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-transform: uppercase;
   cursor: pointer;
   display: flex;
   align-items: center;
+  color: #000;
 }
+
 
 .hamburgerSymbol {
   margin-left: 5px;
@@ -150,7 +156,6 @@
   transition: all 0.5s ease;
 }
 
-/* Mobile Responsive */
 @media (max-width: 768px) {
   .navBar {
     padding: 1rem 1.5rem;
@@ -158,21 +163,36 @@
     position: relative;
   }
 
+  .menuWrapper {
+    width: 105vw; 
+    padding: 4rem 1.5rem 2rem 1.5rem; 
+  }
+
+  .header {
+    padding-top: 1.5rem; 
+    padding-bottom: 1.5rem; 
+  }
   .navLeft {
-    display: none; /* Hide Contact Us on Mobile */
+    display: none; 
   }
 
   .logo {
     position: absolute;
-    left: 22%;
+    left: 30%;
     top: 50%;
     transform: translate(-50%, -50%);
   }
 
   .logo h1 {
-    font-size: 22px;
-    letter-spacing: 3px;
+    font-family: 'EB Garamond', 'Georgia', 'Times New Roman', serif; 
+    font-size: 26px;
+    font-weight: 400; 
+    letter-spacing: 4px; 
+    text-transform: uppercase; 
+    margin: 0;
+    color: #000; 
   }
+  
 
   .navRight {
     flex: 0 0 auto;
@@ -181,14 +201,14 @@
   }
 
   .navIcons {
-    gap: 10px;
+    gap: 0.8rem;
     position: absolute;
-    left: 55%;
+    left: 65%;
 
   }
 
   .icon {
-    width: 20px;
+    display: none; 
   }
 
   .menuToggle {
@@ -200,7 +220,6 @@
   }
 }
 
-/* Logo Vibrate */
 @keyframes vibrate {
   0% { transform: translate(0); }
   20% { transform: translate(-1px, 1px); }
