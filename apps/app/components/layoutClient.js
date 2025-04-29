@@ -61,7 +61,7 @@ export default function LayoutClient({ children }) {
                 !isAuthPage &&
                 !isFrontendDesign &&
                 !isFrontendComingSoonPage &&
-                !isLeModeCoPage &&&& !isLeModeCoComingSoonPage && !isLeModeCoContactUsPage && (
+                !isLeModeCoPage && !isLeModeCoComingSoonPage && !isLeModeCoContactUsPage && (
                   <Footer />
               )}
             </div>

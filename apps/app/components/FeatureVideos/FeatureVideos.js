@@ -84,6 +84,8 @@ export default function FeatureVideos() {
     const lower = name.toLowerCase();
     if (lower === 'transac') return '/transac';
     if (lower === 'frontend web design') return '/frontend-web-design';
+    if(lower === 'savour & sip') return '/sip-and-savour';
+    if(lower === 'le mode co.') return 'le-mode-co';
     return '/coming-soon';
   };
 
@@ -107,7 +109,7 @@ export default function FeatureVideos() {
           <div className={styles.subsidiaries}>
             {service.subsidiaries.map((sub, i) => {
               const href = getHref(sub.name);
-              const openInNewTab = ['transac', 'frontend web design'].includes(sub.name.toLowerCase());
+              const openInNewTab = ['transac', 'frontend web design','savour & sip','le mode co.'].includes(sub.name.toLowerCase());
 
               return (
                 <div key={i} className={styles.subCard}>
