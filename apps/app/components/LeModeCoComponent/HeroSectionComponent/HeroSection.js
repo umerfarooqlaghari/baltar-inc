@@ -37,9 +37,8 @@ export default function Hero() {
 
   return (
     <section className={styles.hero}>
-      {/* Background Video */}
       <video
-        src="/LeModeCo.mp4" // Replace this path to your actual video
+        src="/LeModeCo.mp4" 
         autoPlay
         muted
         loop
@@ -47,11 +46,10 @@ export default function Hero() {
         className={styles.bgVideo}
       />
 
-      {/* Content */}
       <div className={styles.heroContent} ref={contentRef}>
-        <h1>Welcome to Le Mode Co</h1>
+        <h1>Le Mode Co</h1>
         <p>Explore the latest fashion collections of the season</p>
-        <button>Shop Now</button>
+        <a href="/le-mode-co-comingsoon"><button>Shop Now</button></a>
       </div>
     </section>
   );
