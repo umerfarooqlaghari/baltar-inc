@@ -1,0 +1,83 @@
+.aboutUs {
+    background-color: white;
+    padding: 80px 20px;
+    color: #222; /* Ensures default text is visible */
+  }
+  
+  .swiper {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .slideContent {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .imageWrapper {
+    flex: 1;
+  }
+  
+  .imageWrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .textWrapper {
+    flex: 1;
+    color: #222; /* ✅ Ensures text always visible */
+  }
+  
+  .subheading {
+    color: #cba135;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+  
+  .heading {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000; /* Heading bold and visible */
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    font-size: 16px;
+    color: #444; /* Slightly darker text for readability */
+    line-height: 1.7;
+    margin-bottom: 30px;
+  }
+  
+  .button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background: transparent;
+    border: 2px solid #cba135;
+    color: #cba135;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #cba135;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .slideContent {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .textWrapper {
+      padding-top: 30px;
+    }
+  }
+  
