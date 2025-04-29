@@ -19,6 +19,7 @@ const hrefMap = {
   'transac': '/transac',
   'frontend web design': '/frontend-web-design',
   'le mode co.': '/le-mode-co',
+  'savour & sip': '/sip-and-savour'
 };
 
 export default function Navbar() {
@@ -50,7 +51,7 @@ export default function Navbar() {
     const lowerItem = item.toLowerCase();
     const href = hrefMap[lowerItem] || '/coming-soon';
 
-    const isExternal = lowerItem === 'transac' || lowerItem === 'frontend web design' || lowerItem === 'le mode co.';
+    const isExternal = lowerItem === 'transac' || lowerItem === 'frontend web design' || lowerItem === 'le mode co.' || lowerItem === 'savour & sip';
 
     return isExternal ? (
       <a
