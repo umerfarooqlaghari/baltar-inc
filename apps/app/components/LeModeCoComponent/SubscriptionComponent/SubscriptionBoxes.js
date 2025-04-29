@@ -43,7 +43,7 @@ export default function SubscriptionBoxes() {
               ))}
             </ul>
             <div className={styles.tooltip}>Ideal For: {plan.bestFor}</div>
-            <a href="/subscribe" className={styles.cta}>Subscribe Now</a>
+            <a href="/le-mode-co-comingsoon" className={styles.cta}>Subscribe Now</a>
           </div>
         ))}
       </div>
