@@ -3,7 +3,7 @@
 import { useState, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import './navbar.css'; // Your updated CSS file
+import './navbar.css';
 
 const navItems = {
   Finance: ['Wealth Management', 'Transac'],
@@ -13,6 +13,12 @@ const navItems = {
   Fashion: ['VR (Luxury Eyewear & Fashion Tech)', 'Le Mode Co.'],
   Media: ['Consumer Pulse', 'Zeitgeist Media'],
   Retail: ['Baltar Prime'],
+};
+
+const hrefMap = {
+  'transac': '/transac',
+  'frontend web design': '/frontend-web-design',
+  'le mode co.': '/le-mode-co',
 };
 
 export default function Navbar() {
@@ -40,6 +46,29 @@ export default function Navbar() {
     }
   };
 
+  const renderLink = (item, i) => {
+    const lowerItem = item.toLowerCase();
+    const href = hrefMap[lowerItem] || '/coming-soon';
+
+    const isExternal = lowerItem === 'transac' || lowerItem === 'frontend web design' || lowerItem === 'le mode co.';
+
+    return isExternal ? (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        key={i}
+        className="dropdown-item"
+      >
+        {item}
+      </a>
+    ) : (
+      <Link href={href} key={i} className="dropdown-item">
+        {item}
+      </Link>
+    );
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-content">
@@ -50,9 +79,8 @@ export default function Navbar() {
         </Link>
 
         <button className="hamburger" onClick={() => setMobileOpen(true)}>
-        ☰
-       </button>
-
+          ☰
+        </button>
 
         {/* Desktop Links */}
         <div className="nav-links">
@@ -67,31 +95,7 @@ export default function Navbar() {
 
               {active === heading && (
                 <div className="dropdown">
-                  {subItems.map((item, i) => {
-                    const isTransac = item.toLowerCase() === 'transac';
-                    const isFrontend = item.toLowerCase() === 'frontend web design';
-                    const href = isTransac
-                      ? '/transac'
-                      : isFrontend
-                      ? '/frontend-web-design'
-                      : '/coming-soon';
-
-                    return (isTransac || isFrontend) ? (
-                      <a
-                        href={href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        key={i}
-                        className="dropdown-item"
-                      >
-                        {item}
-                      </a>
-                    ) : (
-                      <Link href={href} key={i} className="dropdown-item">
-                        {item}
-                      </Link>
-                    );
-                  })}
+                  {subItems.map((item, i) => renderLink(item, i))}
                 </div>
               )}
             </div>
@@ -119,32 +123,11 @@ export default function Navbar() {
 
                 {mobileDropdownOpen === heading && (
                   <div className="mobile-dropdown">
-                    {subItems.map((item, i) => {
-                      const isTransac = item.toLowerCase() === 'transac';
-                      const isFrontend = item.toLowerCase() === 'frontend web design';
-                      const href = isTransac
-                        ? '/transac'
-                        : isFrontend
-                        ? '/frontend-web-design'
-                        : '/coming-soon';
-
-                      return (isTransac || isFrontend) ? (
-                        <a
-                          href={href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          key={i}
-                          className="dropdown-item"
-                          onClick={() => setMobileOpen(false)}
-                        >
-                          {item}
-                        </a>
-                      ) : (
-                        <Link href={href} key={i} className="dropdown-item" onClick={() => setMobileOpen(false)}>
-                          {item}
-                        </Link>
-                      );
-                    })}
+                    {subItems.map((item, i) => (
+                      <div key={i} onClick={() => setMobileOpen(false)}>
+                        {renderLink(item, i)}
+                      </div>
+                    ))}
                   </div>
                 )}
               </div>

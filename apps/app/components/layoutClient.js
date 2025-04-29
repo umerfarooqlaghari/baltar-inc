@@ -19,6 +19,8 @@ export default function LayoutClient({ children }) {
   const isFrontendComingSoonPage = pathname === '/frontend-web-design-comingsoon';
   const isFrontendContactUsPage = pathname === '/frontend-web-design-contact-us';
   const isLeModeCoPage = pathname === '/le-mode-co';
+  const isLeModeCoComingSoonPage = pathname === '/le-mode-co-comingsoon';
+  const isLeModeCoContactUsPage = pathname === '/le-mode-co-contact-us';
   const isSavourAndSip = pathname === '/sip-and-savour'; 
   const isSavourAndSipComingSoonPage = pathname === '/savour-and-sip-coming-soon';
 
@@ -40,7 +42,7 @@ export default function LayoutClient({ children }) {
                 !isFrontendContactUsPage &&
                 !isTransacComingSoonPage &&
                 !isFrontendComingSoonPage &&
-                !isLeModeCoPage && (
+                !isLeModeCoPage && !isLeModeCoComingSoonPage && !isLeModeCoContactUsPage && (
                   isTransac 
                     ? <TransacHeader />
                     : isFrontendDesign 
@@ -59,7 +61,7 @@ export default function LayoutClient({ children }) {
                 !isAuthPage &&
                 !isFrontendDesign &&
                 !isFrontendComingSoonPage &&
-                !isLeModeCoPage && (
+                !isLeModeCoPage &&&& !isLeModeCoComingSoonPage && !isLeModeCoContactUsPage && (
                   <Footer />
               )}
             </div>

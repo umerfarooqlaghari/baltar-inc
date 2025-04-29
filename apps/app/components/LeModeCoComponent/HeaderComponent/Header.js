@@ -1,4 +1,6 @@
 "use client";
+
+import Link from 'next/link';
 import React, { useState, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import styles from "./Header.module.css";
@@ -14,7 +16,7 @@ const HeaderComponent = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
       if (window.scrollY === 0) {
-        setVibrateKey(prev => prev + 1);
+        setVibrateKey((prev) => prev + 1);
       }
     };
     window.addEventListener("scroll", handleScroll);
@@ -39,7 +41,7 @@ const HeaderComponent = () => {
   }, [isMenuOpen]);
 
   const toggleMenu = () => {
-    setIsMenuOpen(prev => !prev);
+    setIsMenuOpen((prev) => !prev);
   };
 
   const menuItems = [
@@ -50,21 +52,18 @@ const HeaderComponent = () => {
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
       <nav className={styles.navBar}>
-        {/* Left Section */}
         <div className={styles.navLeft}>
-          <a href="/contact" className={styles.contactLink}>+ Contact Us</a>
+          <a href="/le-mode-co-contact-us" className={styles.contactLink}>+ Contact Us</a>
         </div>
 
-        {/* Center Logo with Vibrate */}
         <div className={styles.logo}>
           <motion.a
-            href="/"
             key={vibrateKey}
             initial={{ rotate: 0 }}
-            animate={{ 
-              rotate: [0, 2, -2, 2, -2, 0], 
-              x: [0, -3, 3, -3, 3, 0], 
-              y: [0, 2, -2, 2, -2, 0]
+            animate={{
+              rotate: [0, 2, -2, 2, -2, 0],
+              x: [0, -3, 3, -3, 3, 0],
+              y: [0, 2, -2, 2, -2, 0],
             }}
             transition={{ duration: 10, ease: "easeInOut" }}
           >
@@ -72,12 +71,17 @@ const HeaderComponent = () => {
           </motion.a>
         </div>
 
-        {/* Right Section */}
         <div className={styles.navRight}>
           <div className={styles.navIcons}>
+          <a href="/le-mode-co-comingsoon">
             <img src="/bag-heart.svg" alt="Bag" className={styles.icon} />
+            </a>
+            <a href="/le-mode-co-comingsoon">
             <img src="/person-lines-fill.svg" alt="Profile" className={styles.icon} />
+           </a>
+            <a href="/le-mode-co-comingsoon">
             <img src="/search-heart.svg" alt="Search" className={styles.icon} />
+            </a>
             <span
               ref={menuToggleRef}
               onClick={toggleMenu}
@@ -88,7 +92,6 @@ const HeaderComponent = () => {
           </div>
         </div>
 
-        {/* Animated Menu */}
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
@@ -106,9 +109,13 @@ const HeaderComponent = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.05 }}
                   >
-                    <a href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}>
-                      {item}
-                    </a>
+ <a 
+              href="/le-mode-co-comingsoon" 
+              onClick={() => setIsMenuOpen(false)} 
+              className={styles.menuLink}
+            >
+              {item}
+            </a>
                   </motion.li>
                 ))}
               </ul>
