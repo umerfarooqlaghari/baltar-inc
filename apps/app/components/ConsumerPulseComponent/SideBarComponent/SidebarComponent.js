@@ -17,9 +17,12 @@ export default function SidebarComponent() {
 
   return (
     <div className={`${styles.sidebarContainer} ${isOpen ? styles.open : ""}`}>
-      <button className={styles.toggleButton} onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? "×" : "Latest"}
-      </button>
+      <button
+    className={`${styles.toggleButton} ${isOpen ? styles.closeButton : ""}`}
+    onClick={() => setIsOpen(!isOpen)}
+  >
+    {isOpen ? "×" : "Latest"}
+  </button>
 
       {isOpen && (
         <aside className={styles.sidebar}>

@@ -91,3 +91,19 @@
   color: #333;
   text-decoration: none;
 }
+
+@media (max-width: 768px) {
+  .closeButton {
+    position: left;
+    top: 1rem;
+    right: 0.5rem;
+    z-index: 1001;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: Black;
+    cursor: pointer;
+  }
+
+}
+ 
