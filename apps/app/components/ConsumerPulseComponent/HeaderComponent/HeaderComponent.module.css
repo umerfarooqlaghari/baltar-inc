@@ -1,0 +1,120 @@
+.header {
+    background-color: black;
+    color: white;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+  .topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .actionLink {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding: 0.3rem;
+    border: 2px solid white;
+
+  }
+  
+  .subscribeBtn {
+    background: white;
+    color: black;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .navbar {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 2rem;
+  }
+  
+  .navItems {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navItems li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  
+  .searchInput {
+    background: #333;
+    border: 1px solid #555;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    width: 220px;
+  }
+  
+  @media (max-width: 768px) {
+    .topBar {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 1rem;
+    }
+  
+    .logo {
+      font-size: 1.1rem; /* Smaller Consumer Pulse */
+      font-weight: 600;
+    }
+  
+    .actions {
+      display: flex;
+      gap: 0.5rem;
+      font-size: 0.8rem; /* Shrink text for buttons */
+      white-space: nowrap;
+    }
+  
+    .subscribeBtn {
+      padding: 0.2rem 0.6rem;
+      font-size: 0.8rem;
+    }
+  
+    .navbar {
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 0.5rem 1rem;
+      background-color: #111;
+    }
+  
+    .navItems {
+      display: inline-flex;
+      gap: 1.2rem;
+      font-size: 0.85rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .searchInput {
+      display: none; /* Hide search bar on mobile */
+    }
+  }
