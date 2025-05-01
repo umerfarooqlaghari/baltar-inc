@@ -53,7 +53,7 @@ export default function Navbar() {
     const lowerItem = item.toLowerCase();
     const href = hrefMap[lowerItem] || '/coming-soon';
 
-    const isExternal = lowerItem === 'transac' || lowerItem === 'frontend web design' || lowerItem === 'le mode co.' || lowerItem === 'savour & sip' || lowerItem === 'consumer pulse' || lowerItem === 'VR (Luxury Eyewear & Fashion Tech)';
+    const isExternal = lowerItem === 'transac' || lowerItem === 'frontend web design' || lowerItem === 'le mode co.' || lowerItem === 'savour & sip' || lowerItem === 'consumer pulse' || lowerItem === 'vr (luxury eyewear & fashion tech)';
 
     return isExternal ? (
       <a
