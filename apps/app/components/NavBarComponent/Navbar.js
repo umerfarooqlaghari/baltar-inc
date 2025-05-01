@@ -20,8 +20,8 @@ const hrefMap = {
   'frontend web design': '/frontend-web-design',
   'le mode co.': '/le-mode-co',
   'savour & sip': '/sip-and-savour',
-  'consumer pulse': '/consumer-pulse'
-
+  'consumer pulse': '/consumer-pulse',
+  'vr (luxury eyewear & fashion tech)': '/vr',
 };
 
 export default function Navbar() {
@@ -53,7 +53,7 @@ export default function Navbar() {
     const lowerItem = item.toLowerCase();
     const href = hrefMap[lowerItem] || '/coming-soon';
 
-    const isExternal = lowerItem === 'transac' || lowerItem === 'frontend web design' || lowerItem === 'le mode co.' || lowerItem === 'savour & sip' || lowerItem === 'consumer pulse';
+    const isExternal = lowerItem === 'transac' || lowerItem === 'frontend web design' || lowerItem === 'le mode co.' || lowerItem === 'savour & sip' || lowerItem === 'consumer pulse' || lowerItem === 'VR (Luxury Eyewear & Fashion Tech)';
 
     return isExternal ? (
       <a
