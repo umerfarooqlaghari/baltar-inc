@@ -27,8 +27,7 @@ export default function LayoutClient({ children }) {
   const isConsumerPulseLoginpage = pathname === '/consumer-pulse-signin';
   const isConsumerPulseSignuppage = pathname === '/consumer-pulse-signup';
   const isConsumerPulseComingSoonpage = pathname === '/consumer-pulse-comingsoon';
-
-
+  const isVRpage = pathname === '/vr';
 
   return (
     <div className="w-full overflow-x-hidden bg-black text-white font-sans min-h-screen">
@@ -48,7 +47,14 @@ export default function LayoutClient({ children }) {
                 !isFrontendContactUsPage &&
                 !isTransacComingSoonPage &&
                 !isFrontendComingSoonPage &&
-                !isLeModeCoPage && !isLeModeCoComingSoonPage && !isLeModeCoContactUsPage && !isConsumerPulsepage && !isConsumerPulseComingSoonpage && !isConsumerPulseLoginpage && !isConsumerPulseSignuppage &&(
+                !isLeModeCoPage &&
+                !isLeModeCoComingSoonPage &&
+                !isLeModeCoContactUsPage && 
+                !isConsumerPulsepage && 
+                !isConsumerPulseComingSoonpage && 
+                !isConsumerPulseLoginpage && 
+                !isConsumerPulseSignuppage &&
+                !isVRpage &&(
                   isTransac 
                     ? <TransacHeader />
                     : isFrontendDesign 
@@ -67,7 +73,15 @@ export default function LayoutClient({ children }) {
                 !isAuthPage &&
                 !isFrontendDesign &&
                 !isFrontendComingSoonPage &&
-                !isLeModeCoPage && !isLeModeCoComingSoonPage && !isLeModeCoContactUsPage && !isConsumerPulsepage && !isConsumerPulseLoginpage && !isConsumerPulseSignuppage && !isConsumerPulseComingSoonpage &&(
+                !isLeModeCoPage && 
+                !isLeModeCoComingSoonPage && 
+                !isLeModeCoContactUsPage && 
+                !isConsumerPulsepage && 
+                !isConsumerPulseLoginpage && 
+                !isConsumerPulseSignuppage && 
+                !isConsumerPulseComingSoonpage &&
+                !isVRpage &&
+                (
                   <Footer />
               )}
             </div>
