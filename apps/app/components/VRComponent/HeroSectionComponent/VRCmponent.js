@@ -42,7 +42,7 @@ export default function VRPage() {
           </video>
           <div className={styles.textOverlay}>
             <h2>Fashion & Accessories</h2>
-            <Link href="/coming-soon" className={styles.cleanButton}>Shop now</Link>
+            <Link href="/consumer-pulse-comingsoon" className={styles.cleanButton}>Shop now</Link>
           </div>
         </div>
 
@@ -62,7 +62,7 @@ export default function VRPage() {
           </video>
           <div className={styles.textOverlay}>
             <h2>Fragrance & Beauty</h2>
-            <Link href="/coming-soon" className={styles.cleanButton}>Shop now</Link>
+            <Link href="/consumer-pulse-comingsoon" className={styles.cleanButton}>Shop now</Link>
           </div>
         </div>
       </div>
