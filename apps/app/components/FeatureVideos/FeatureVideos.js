@@ -86,6 +86,8 @@ export default function FeatureVideos() {
     if (lower === 'frontend web design') return '/frontend-web-design';
     if(lower === 'savour & sip') return '/sip-and-savour';
     if(lower === 'le mode co.') return 'le-mode-co';
+    if(lower==='vr (luxury eyewear & fashion tech)') return '/vr';
+    if(lower==='consumer pulse') return '/consumer-pulse';
     return '/coming-soon';
   };
 
@@ -109,7 +111,7 @@ export default function FeatureVideos() {
           <div className={styles.subsidiaries}>
             {service.subsidiaries.map((sub, i) => {
               const href = getHref(sub.name);
-              const openInNewTab = ['transac', 'frontend web design','savour & sip','le mode co.'].includes(sub.name.toLowerCase());
+              const openInNewTab = ['transac', 'frontend web design','savour & sip','le mode co.','vr (luxury eyewear & fashion tech)','consumer pulse'].includes(sub.name.toLowerCase());
 
               return (
                 <div key={i} className={styles.subCard}>
