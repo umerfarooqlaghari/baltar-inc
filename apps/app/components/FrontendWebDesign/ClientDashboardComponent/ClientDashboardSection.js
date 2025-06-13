@@ -35,13 +35,12 @@
           muted
           playsInline
         />
-        <Link href="/frontend-web-design-comingsoon" passHref legacyBehavior>
+        <Link href="/frontend-web-design-services" passHref legacyBehavior>
         <a className={styles.linkWrapper}>
         <div className={styles.textCard}>
-          <h2>Client Dashboard</h2>
+          <h2>Services</h2>
           <p>
-            Stay in control with real-time visibility into project status, file management, team
-            communication, and invoices – all in one intuitive dashboard.
+            Explore our complete range of web solutions — from custom design and hosting to e-commerce and ongoing support.
           </p>
         </div>
         </a>
