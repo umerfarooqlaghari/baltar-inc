@@ -1,83 +1,368 @@
-.aboutUs {
-    background-color: white;
-    padding: 80px 20px;
-    color: #222; /* Ensures default text is visible */
+.pageContainer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.header {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.backButton {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.backButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.headerContent {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.headline {
+  font-size: 52px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background: linear-gradient(135deg, #ffffff 0%, #cba135 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.storySection {
+  padding: 100px 20px;
+  background: white;
+}
+
+.storyContent {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 42px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.storyText {
+  text-align: left;
+}
+
+.storyText p {
+  font-size: 20px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.missionSection {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #cba135 0%, #b8941f 100%);
+  color: white;
+  text-align: center;
+}
+
+.missionContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.missionTitle {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.missionStatement {
+  font-size: 28px;
+  font-style: italic;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.differentiatorSection {
+  padding: 100px 20px;
+  background: white;
+}
+
+.differentiatorGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.differentiatorCard {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 5px solid #cba135;
+}
+
+.differentiatorCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.differentiatorIcon {
+  font-size: 48px;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #cba135 0%, #b8941f 100%);
+  padding: 20px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+}
+
+.differentiatorTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.differentiatorDescription {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.teamSection {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.teamCard {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.teamCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.teamPhoto {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #cba135;
+}
+
+.teamPhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.teamInfo {
+  text-align: center;
+}
+
+.teamName {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.teamRole {
+  font-size: 16px;
+  color: #cba135;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.teamDescription {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.ctaSection {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+}
+
+.ctaContainer {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.ctaDescription {
+  font-size: 20px;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaButton {
+  background: linear-gradient(135deg, #cba135 0%, #b8941f 100%);
+  color: white;
+  padding: 18px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  background: linear-gradient(135deg, #b8941f 0%, #a6841c 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(203, 161, 53, 0.4);
+}
+
+.ctaButtonSecondary {
+  background: transparent;
+  color: white;
+  padding: 18px 30px;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctaButtonSecondary:hover {
+  background: white;
+  color: #2c3e50;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .headline {
+    font-size: 36px;
   }
-  
-  .swiper {
-    max-width: 1200px;
-    margin: auto;
-  }
-  
-  .slideContent {
-    display: flex;
-    gap: 50px;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  .imageWrapper {
-    flex: 1;
-  }
-  
-  .imageWrapper img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
-  }
-  
-  .textWrapper {
-    flex: 1;
-    color: #222; /* ✅ Ensures text always visible */
-  }
-  
-  .subheading {
-    color: #cba135;
-    text-transform: uppercase;
-    font-size: 16px;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
-  }
-  
-  .heading {
+
+  .sectionTitle {
     font-size: 32px;
-    font-weight: bold;
-    color: #000; /* Heading bold and visible */
+  }
+
+  .storyText p {
+    font-size: 18px;
+  }
+
+  .missionTitle {
+    font-size: 28px;
+  }
+
+  .missionStatement {
+    font-size: 22px;
+  }
+
+  .differentiatorGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .teamGrid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+
+  .ctaTitle {
+    font-size: 28px;
+  }
+
+  .ctaDescription {
+    font-size: 18px;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ctaButton,
+  .ctaButtonSecondary {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .backButton {
+    position: relative;
     margin-bottom: 20px;
   }
-  
-  .description {
-    font-size: 16px;
-    color: #444; /* Slightly darker text for readability */
-    line-height: 1.7;
-    margin-bottom: 30px;
+
+  .header {
+    padding: 40px 20px;
   }
-  
-  .button {
-    padding: 12px 24px;
-    font-size: 16px;
-    background: transparent;
-    border: 2px solid #cba135;
-    color: #cba135;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: 0.3s ease;
-  }
-  
-  .button:hover {
-    background-color: #cba135;
-    color: white;
-  }
-  
-  @media (max-width: 768px) {
-    .slideContent {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .textWrapper {
-      padding-top: 30px;
-    }
-  }
+}
   

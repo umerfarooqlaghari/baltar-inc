@@ -22,6 +22,12 @@
     z-index: 0;
     transition: transform 1s ease;
   }
+
+  .fallbackBackground {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-size: cover;
+    background-position: center;
+  }
   
   .zoomIn {
     transform: scale(1.1);

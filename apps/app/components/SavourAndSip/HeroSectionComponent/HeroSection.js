@@ -12,35 +12,34 @@ const slides = [
   {
     video: "/savourandsip.mp4",
     image: "/food1.jpg",
-    title: "WELCOME TO SAVOUR & SIP",
-    description: "Indulge in personalized culinary experiences with a professional personal chef. Specializing in farm-to-table ingredients, vegan, and gluten-free diets.",
-    buttonText: "Explore more",
+    title: "Bringing Hospitality to Life  One Event, One Venue, One Team at a Time.",
+    description: "Event bartenders, catering, restaurant staffing, and hospitality experts serving private, corporate, and commercial clients across Ontario.",
+    buttonText: "Book Our Services",
   },
   {
     video: "/giftcard.mp4",
     image: "/giftcard.jpg",
-    title: "Get a giftcard from Savour & Sip",
-    description: "",
-    buttonText: "Redeem",
+    title: "Bringing Hospitality to Life  One Event, One Venue, One Team at a Time." ,
+    description: "Event bartenders, catering, restaurant staffing, and hospitality experts serving private, corporate, and commercial clients across Ontario.",
+    buttonText: "Hire Hospitality Staff",
   },
   {
     video: "/food.mp4",
     image: "/food3.jpg",
-    title: "Food with Savour & Sip",
-    description: "",
-    buttonText: "Dive in",
+    title: "Bringing Hospitality to Life  One Event, One Venue, One Team at a Time.",
+    description: "Event bartenders, catering, restaurant staffing, and hospitality experts serving private, corporate, and commercial clients across Ontario.",
+    buttonText: "Plan Your Event",
   },
 ];
 
 const features = [
-  "AI-Powered Menu Builder",
-  "Client Booking System",
-  "E-Commerce for Event Packages",
-  "Monthly Subscription Menus",
-  "Live Chat & AI Support",
-  "Event Planning Assistance",
+  "Canapés & Hors d’Oeuvres",
+  "Buffet & BBQ",
+  "Family-Style Dinners",
+  "Themed Cuisine (Caribbean, Italian, Vegan, etc.",
+  "Pricing & Packages",
+  "About us",
 ];
-
 export default function HeroSection() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -67,8 +66,12 @@ export default function HeroSection() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleMenuClick = () => {
-    router.push("/savour-and-sip-coming-soon");
+  const handleMenuClick = (feature) => {
+    if (feature === "About us") {
+      router.push("/about-section");
+    } else {
+      router.push("/savour-and-sip-coming-soon");
+    }
     setMenuOpen(false);
   };
 
@@ -139,7 +142,7 @@ export default function HeroSection() {
                 <h3>Our Features</h3>
                 <ul>
                   {features.map((feature, index) => (
-                    <li key={index} onClick={handleMenuClick}>
+                    <li key={index} onClick={() => handleMenuClick(feature)}>
                       {feature}
                     </li>
                   ))}

@@ -13,21 +13,31 @@ import '../components/FrontendWebDesign/CursorComponent/Cursor.css'; // 🔥 Imp
 
 export default function FrontendWebDesignPage() {
   useEffect(() => {
-    const cursor = document.createElement('div');
-    cursor.className = 'frontend-cursor';
-    document.body.appendChild(cursor);
+    let cursor = null;
 
-    const moveCursor = (e) => {
-      cursor.style.left = `${e.clientX}px`;
-      cursor.style.top = `${e.clientY}px`;
-    };
+    try {
+      cursor = document.createElement('div');
+      cursor.className = 'frontend-cursor';
+      document.body.appendChild(cursor);
 
-    window.addEventListener('mousemove', moveCursor);
+      const moveCursor = (e) => {
+        if (cursor) {
+          cursor.style.left = `${e.clientX}px`;
+          cursor.style.top = `${e.clientY}px`;
+        }
+      };
 
-    return () => {
-      window.removeEventListener('mousemove', moveCursor);
-      document.body.removeChild(cursor);
-    };
+      window.addEventListener('mousemove', moveCursor);
+
+      return () => {
+        window.removeEventListener('mousemove', moveCursor);
+        if (cursor && document.body.contains(cursor)) {
+          document.body.removeChild(cursor);
+        }
+      };
+    } catch (error) {
+      console.warn('Cursor component error:', error);
+    }
   }, []);
 
   return (

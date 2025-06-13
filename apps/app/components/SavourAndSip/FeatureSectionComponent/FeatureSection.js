@@ -6,57 +6,82 @@ import styles from './FeatureSection.module.css';
 
 const features = [
   {
-    title: "AI-Powered Menu Builder",
-    description: "Let your cravings run wild — customize your catering menu to fit every dietary quirk, fancy, or obsession. Our AI ensures no guest feels left out.",
+    title: "Who We Serve",
+    description: [
+    '1) Private Clients – Backyard parties, weddings, home dinners, birthdays ',
+    '2) Corporate Clients – Office events, brand launches, fundraisers, galas ',
+    '3) Restaurants & Hospitality – Short-term or ongoing kitchen/front-of-house staffing ',
+    '4) Event Planners & Venues – Reliable partners for multiple events, weekly or on-call',
+  ],
+    
   },
   {
-    title: "Client Booking System",
-    description: "Book catering, bartending, or a private chef faster than you can say ‘Bon Appétit!’ — right from your device, anytime, anywhere.",
+    title: "Client Reviews",
+    description: [
+    '1) The team from Savour & Sip were the best bartenders I’ve ever hired. On time, dressed impeccably, and our guests loved them!” — Private Wedding, Mississauga ',
+    '2) I was blown away by their attention to detail and how effortlessly they staffed our restaurant grand opening.” — Restaurant Manager, Toronto ',
+    ],
   },
   {
-    title: "E-Commerce for Event Packages",
-    description: "Planning a soirée? Grab curated event packages & party rentals at a tap — because unforgettable nights deserve effortless planning.",
+    title: "Events We Serve",
+    description: "Private Events, Weddings, Corporate Events, Venue Partnerships, Pop-Ups & Brand Launches.",
   },
   {
-    title: "Monthly Subscription Menus",
-    description: "Say hello to culinary surprises! Subscribe and receive exclusive monthly menu drops crafted by top chefs, designed to excite your tastebuds.",
+    title: "Pricing & Packages",
+    description: "Get a Custom Quote",
+    isQuoteCard: true,
+  },
+
+  {
+    title: "Services",
+    description: "Bartending, Catering, Kitchen & Restaurant Staffing, Event Staffing",
+    isServiceCard: true,
   },
   {
-    title: "Live Chat & AI Support",
-    description: "Got a question at 2am? Our AI concierge is ready to chat — answering all your dietary, pricing, and availability needs with zero sass (or maybe a little).",
-  },
-  {
-    title: "Event Planning Assistance",
-    description: "Not sure how much food or wine you need? Our AI event guru tailors your menu perfectly to your guest list, vibe, and (most importantly) your wallet.",
+    title: "About us",
+    description: "about us",
+    isAboutCard: true,
   }
 ];
 
 export default function FeatureSection() {
   const router = useRouter();
 
-  const handleFeatureClick = () => {
-    router.push('/savour-and-sip-coming-soon');
+  const handleFeatureClick = (feature) => {
+    if (feature.isQuoteCard) {
+      router.push('/quote-section');
+    } else if (feature.isServiceCard) {
+      router.push('/service-section');
+    } else if (feature.isAboutCard) {
+      router.push('/about-section');
+    } else {
+      router.push('/savour-and-sip-coming-soon');
+    }
   };
 
+
+
   return (
-    <section className={styles.featureSection}>
-      <div className={styles.container}>
-        {features.map((feature, index) => (
-          <motion.div
-            key={index}
-            className={styles.featureCard}
-            initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
-            viewport={{ once: false, amount: 0.5 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
-            onClick={handleFeatureClick} // ✅ Updated here
-          >
-            <p className={styles.smallTitle}>{feature.title}</p>
-            <p className={styles.description}>{feature.description}</p>
-          </motion.div>
-        ))}
-      </div>
-    </section>
+    <>
+      <section className={styles.featureSection}>
+        <div className={styles.container}>
+          {features.map((feature, index) => (
+            <motion.div
+              key={index}
+              className={styles.featureCard}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+              viewport={{ once: false, amount: 0.5 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              onClick={() => handleFeatureClick(feature)}
+            >
+              <p className={styles.smallTitle}>{feature.title}</p>
+              <p className={styles.description}>{feature.description}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+    </>
   );
 }

@@ -15,13 +15,12 @@ export default function AIAuditSection() {
         <source src="/AIAudit.mp4" type="video/mp4" />
       </video>
 
-      <Link href="/frontend-web-design-comingsoon" passHref legacyBehavior>
+      <Link href="/frontend-web-design-about" passHref legacyBehavior>
   <a className={styles.linkWrapper}>
     <div className={styles.overlayCard}>
-      <h2 className={styles.heading}>AI-Powered Website Audit</h2>
+      <h2 className={styles.heading}>About US</h2>
       <p className={styles.description}>
-        Run deep diagnostics for SEO, accessibility, performance, and
-        security — all powered by automation and AI intelligence.
+        Learn about our vision, mission, and the values that drive us to create exceptional digital experiences.
       </p>
     </div>
   </a>
